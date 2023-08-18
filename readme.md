@@ -1,0 +1,3 @@
+6 week day 5 QA and DevOps Assessment
+
+In this assessment, I've utilized a pre-built "Robot Duel" game interface encompassing HTML, CSS, and JavaScript to allow users to draw and select robots for duels. Manual testing and bug documentation improved my quality assurance (QA) skills, while setting up Rollbar for error logging enhanced my error handling knowledge. Leveraging automated testing using tools like Jest validated game components, strengthening reliability. AWS EC2 deployment deepened my understanding of deployment workflows, version control, and cloud-based hosting, emphasizing full-stack development and real-world application deployment. Overall, this assessment enriched my technical aptitude in web development, QA, DevOps, and deployment practices.

@@ -1,0 +1,61 @@
+Description
+
+*********** Test Case ***********
+
+Overview: Test the functionality of 'Duel' button.
+Links: http://localhost:3002/
+
+Test Criteria:
+Click on 'Draw' button to check if it loads all the available robots
+click on 'Add to Duo' button of two robots to select for duel against computer
+Click on 'Duel!' button to start the duel
+
+Expected Result:
+To start the duel and display either 'You won!' or 'You lost!'
+
+Actual Output:
+Starting the duel and getting the response as expected.
+
+Other Details:
+Chrome Version: Version 114.0.5735.248 (Official Build) (arm64)
+MacOS Version: 13.4 (22F66)
+
+--------------------------------------------------------------------------
+*********** Bug Report ***********
+
+Overview: 'Wins' value doesn't get updated.
+Links: http://localhost:3002/
+
+Steps to Reproduce:
+Click on 'Draw' button to loads all the available robots
+click on 'Add to Duo' button to select two robots and duel against computer
+Click on 'Duel!' button to start the duel
+
+Expected Result:
+Increment the value of 'Wins' by 1
+
+Actual Output:
+Increments the value of 'Losses' by 1 instead of incrementing the 'Wins' value.
+
+Other Details:
+Chrome Version: Version 114.0.5735.248 (Official Build) (arm64)
+MacOS Version: 13.4 (22F66)
+
+--------------------------------------------------------------------------
+*********** Bug Report ***********
+
+Overview: 'See All Bots' button doesn't display the bots
+Links: http://localhost:3002/
+
+Test Criteria:
+Click on 'See All Bots' button to check if it works properly
+
+Expected Result:
+To get all the bots displayed on the screen
+
+Actual Result:
+Receving this error on console: 'ERROR GETTING BOTS ReferenceError: botsArr is not defined'
+
+Other Details:
+Chrome Version: Version 114.0.5735.248 (Official Build) (arm64)
+MacOS Version: 13.4 (22F66)
