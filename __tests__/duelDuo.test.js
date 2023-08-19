@@ -19,9 +19,7 @@ describe("Duel Duo tests", () => {
   test("clicking the 'draw' button displays robots choices", async () => {
     await driver.get("http://localhost:8000");
     await driver.sleep(3000);
-    const drawBtn = await driver
-      .findElement(By.css('button[id="draw"]'))
-      .click();
+    await driver.findElement(By.css('button[id="draw"]')).click();
     await driver.sleep(3000);
 
     const choicesDiv = await driver.findElement(By.css('div[id="choices"]'));
