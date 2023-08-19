@@ -9,15 +9,15 @@ const playerRecord = {
 const app = express();
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(`${__dirname}/public`));
 
 // include and initialize the rollbar library with your access token
-var Rollbar = require('rollbar')
+var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
-  accessToken: 'c647df5586d64932bc69b1fe51ab7728',
+  accessToken: "c647df5586d64932bc69b1fe51ab7728",
   captureUncaught: true,
   captureUnhandledRejections: true,
-})
+});
 
 // Add up the total health of all the robots
 const calculateTotalHealth = (robots) =>
@@ -46,11 +46,11 @@ const calculateHealthAfterAttack = ({ playerDuo, compDuo }) => {
 
 app.get("/api/robots", (req, res) => {
   try {
-    rollbar.log('successfully getting robots')
+    rollbar.log("successfully getting robots");
     res.status(200).send(botsArr);
   } catch (error) {
     console.error("ERROR GETTING BOTS", error);
-    rollbar.error(error, 'ERROR GETTING BOTS')
+    rollbar.error(error, "ERROR GETTING BOTS");
     res.sendStatus(400);
   }
 });
@@ -61,7 +61,7 @@ app.get("/api/robots/shuffled", (req, res) => {
     res.status(200).send(shuffled);
   } catch (error) {
     console.error("ERROR GETTING SHUFFLED BOTS", error);
-    rollbar.warning(error, 'ERROR GETTING BOTS')
+    rollbar.warning(error, "ERROR GETTING BOTS");
     res.sendStatus(400);
   }
 });
@@ -85,7 +85,7 @@ app.post("/api/duel", (req, res) => {
     }
   } catch (error) {
     console.log("ERROR DUELING", error);
-    rollbar.critical(error, 'Error dueling...')
+    rollbar.critical(error, "Error dueling...");
     res.sendStatus(400);
   }
 });
